@@ -1,7 +1,6 @@
 import 'package:flutter/widgets.dart';
 
 class TrickGlossaryScreen extends StatelessWidget {
-
   static const String name = 'trick_glossary_screen';
 
   const TrickGlossaryScreen({super.key});

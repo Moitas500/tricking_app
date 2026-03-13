@@ -6,49 +6,49 @@ final router = GoRouter(
     GoRoute(
       path: '/',
       name: HomeScreen.name,
-      builder: (context, screen) => HomeScreen()
+      builder: (context, screen) => HomeScreen(),
     ),
 
     GoRoute(
       path: '/combo_generator',
       name: ComboGeneratorScreen.name,
-      builder: (context, screen) => ComboGeneratorScreen()
+      builder: (context, screen) => ComboGeneratorScreen(),
     ),
 
     GoRoute(
       path: '/profile',
       name: ProfileScreen.name,
-      builder: (context, screen) => ProfileScreen()
+      builder: (context, screen) => ProfileScreen(),
     ),
 
     GoRoute(
       path: '/progress_analytics',
       name: ProgressAnalyticsScreen.name,
-      builder: (context, screen) => ProgressAnalyticsScreen()
+      builder: (context, screen) => ProgressAnalyticsScreen(),
     ),
 
     GoRoute(
       path: '/skill_tree',
       name: SkillTreeScreen.name,
-      builder: (context, screen) => SkillTreeScreen()
+      builder: (context, screen) => SkillTreeScreen(),
     ),
 
     GoRoute(
       path: '/training_planner',
       name: TrainingPlannerScreen.name,
-      builder: (context, screen) => TrainingPlannerScreen()
+      builder: (context, screen) => TrainingPlannerScreen(),
     ),
 
     GoRoute(
       path: '/trick_glossary',
       name: TrickGlossaryScreen.name,
-      builder: (context, screen) => TrickGlossaryScreen()
+      builder: (context, screen) => TrickGlossaryScreen(),
     ),
 
     GoRoute(
       path: '/video_library',
       name: VideoLibraryScreen.name,
-      builder: (context, screen) => VideoLibraryScreen()
+      builder: (context, screen) => VideoLibraryScreen(),
     ),
-  ]
+  ],
 );
