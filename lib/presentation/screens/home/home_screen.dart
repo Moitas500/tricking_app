@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tricking_app/presentation/widgets/header/header.dart';
+import 'package:tricking_app/presentation/screens/home/widgets/header.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String name = 'home_screen';
