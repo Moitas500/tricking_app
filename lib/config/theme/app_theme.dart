@@ -12,18 +12,38 @@ const List<Color> _colorThemes = [
 ];
 
 class AppTheme {
-  final int selectedColor;
+  static ThemeData darkTheme = ThemeData(
+    brightness: Brightness.dark,
 
-  AppTheme({this.selectedColor = 0})
-    : assert(
-        selectedColor >= 0 && selectedColor < _colorThemes.length - 1,
-        'Colors must be between 0 and ${_colorThemes.length}',
-      );
+    scaffoldBackgroundColor: const Color(0xFF0F1115),
 
-  ThemeData theme() {
-    return ThemeData(
-      useMaterial3: true,
-      colorSchemeSeed: _colorThemes[selectedColor],
-    );
-  }
+    primaryColor: const Color(0xFF7C4DFF),
+
+    colorScheme: const ColorScheme.dark(
+      primary: Color(0xFF7C4DFF),
+      secondary: Color(0xFF00C2FF),
+      surface: Color(0xFF1A1D24),
+      error: Color(0xFFFF4D4F),
+    ),
+
+    cardColor: const Color(0xFF1A1D24),
+
+    textTheme: const TextTheme(
+      bodyLarge: TextStyle(color: Colors.white),
+      bodyMedium: TextStyle(color: Color(0xFF9CA3AF)),
+    ),
+
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Color(0xFF0F1115),
+      elevation: 0,
+    ),
+
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: const Color(0xFF7C4DFF),
+        foregroundColor: Colors.white,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      ),
+    ),
+  );
 }
