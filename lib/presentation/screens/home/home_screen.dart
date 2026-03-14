@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tricking_app/presentation/widgets/header/header.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String name = 'home_screen';
@@ -32,8 +33,10 @@ class HomeScreen extends StatelessWidget {
             padding: const EdgeInsets.all(16),
             child: Column(
               children: const [
-                // HeaderSection(),
+                
+                Header(),
                 SizedBox(height: 20),
+                
                 // LevelProgress(),
                 SizedBox(height: 20),
                 // SkillProgress(),
