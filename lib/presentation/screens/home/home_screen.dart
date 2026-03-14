@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String name = 'home_screen';
@@ -15,8 +14,14 @@ class HomeScreen extends StatelessWidget {
         unselectedItemColor: Colors.grey,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.fitness_center), label: "Training"),
-          BottomNavigationBarItem(icon: Icon(Icons.bar_chart), label: "Progress"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.fitness_center),
+            label: "Training",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.bar_chart),
+            label: "Progress",
+          ),
           BottomNavigationBarItem(icon: Icon(Icons.group), label: "Community"),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
         ],
