@@ -4,10 +4,10 @@ import 'package:tricking_app/main.dart';
 
 void main() {
   testWidgets('App builds correctly', (WidgetTester tester) async {
-
     FlutterError.onError = (FlutterErrorDetails details) {
-      bool isImageError =
-          details.exception.toString().contains('NetworkImageLoadException');
+      bool isImageError = details.exception.toString().contains(
+        'NetworkImageLoadException',
+      );
 
       if (!isImageError) {
         FlutterError.presentError(details);
