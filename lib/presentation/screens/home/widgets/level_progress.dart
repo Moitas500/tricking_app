@@ -85,16 +85,15 @@ class _LinearProgressIndicator extends StatelessWidget {
         builder: (context, constraints) {
           return Align(
             alignment: Alignment.centerLeft,
-            child:
-              Container(
-                width: constraints.maxWidth * 0.55,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  gradient: const LinearGradient(
-                    colors: [Color(0xFF34D399), Color(0xFF60A5FA)],
-                  ),
+            child: Container(
+              width: constraints.maxWidth * 0.55,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                gradient: const LinearGradient(
+                  colors: [Color(0xFF34D399), Color(0xFF60A5FA)],
                 ),
               ),
+            ),
           );
         },
       ),

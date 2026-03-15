@@ -27,13 +27,7 @@ class SkillCard extends StatelessWidget {
   final Color color;
   final IconData icon;
 
-  const SkillCard(
-    this.title,
-    this.value,
-    this.color,
-    this.icon, {
-    super.key,
-  });
+  const SkillCard(this.title, this.value, this.color, this.icon, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +50,9 @@ class SkillCard extends StatelessWidget {
               Text(
                 title,
                 style: theme.textTheme.bodyMedium?.copyWith(
-                  color: theme.textTheme.bodyMedium?.color?.withValues(alpha: .8),
+                  color: theme.textTheme.bodyMedium?.color?.withValues(
+                    alpha: .8,
+                  ),
                 ),
               ),
             ],

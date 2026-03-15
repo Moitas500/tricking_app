@@ -14,9 +14,7 @@ class Header extends StatelessWidget {
           children: [
             const CircleAvatar(
               radius: 22,
-              backgroundImage: NetworkImage(
-                "https://i.pravatar.cc/150?img=3",
-              ),
+              backgroundImage: NetworkImage("https://i.pravatar.cc/150?img=3"),
             ),
 
             const SizedBox(width: 12),
@@ -33,7 +31,9 @@ class Header extends StatelessWidget {
                 Text(
                   "Ready to level up?",
                   style: theme.textTheme.bodySmall?.copyWith(
-                    color: theme.textTheme.bodySmall?.color?.withOpacity(.7),
+                    color: theme.textTheme.bodySmall?.color?.withValues(
+                      alpha: .7,
+                    ),
                   ),
                 ),
               ],
@@ -43,15 +43,9 @@ class Header extends StatelessWidget {
 
         Row(
           children: [
-            _HeaderButton(
-              icon: Icons.notifications_none,
-              theme: theme,
-            ),
+            _HeaderButton(icon: Icons.notifications_none, theme: theme),
             const SizedBox(width: 10),
-            _HeaderButton(
-              icon: Icons.settings_outlined,
-              theme: theme,
-            ),
+            _HeaderButton(icon: Icons.settings_outlined, theme: theme),
           ],
         ),
       ],
@@ -63,10 +57,7 @@ class _HeaderButton extends StatelessWidget {
   final IconData icon;
   final ThemeData theme;
 
-  const _HeaderButton({
-    required this.icon,
-    required this.theme,
-  });
+  const _HeaderButton({required this.icon, required this.theme});
 
   @override
   Widget build(BuildContext context) {
@@ -77,11 +68,7 @@ class _HeaderButton extends StatelessWidget {
         color: theme.colorScheme.surface,
         borderRadius: BorderRadius.circular(10),
       ),
-      child: Icon(
-        icon,
-        size: 20,
-        color: theme.colorScheme.secondary,
-      ),
+      child: Icon(icon, size: 20, color: theme.colorScheme.secondary),
     );
   }
 }

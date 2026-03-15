@@ -18,33 +18,35 @@ class HomeScreen extends StatelessWidget {
         type: BottomNavigationBarType.fixed,
         backgroundColor: theme.colorScheme.surface,
         selectedItemColor: theme.colorScheme.secondary,
-        unselectedItemColor: theme.textTheme.bodySmall?.color?.withValues(alpha: 0.6),
+        unselectedItemColor: theme.textTheme.bodySmall?.color?.withValues(
+          alpha: 0.6,
+        ),
         showUnselectedLabels: true,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon( Icons.home_outlined ),
-            activeIcon: Icon( Icons.home ), 
+            icon: Icon(Icons.home_outlined),
+            activeIcon: Icon(Icons.home),
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon( Icons.fitness_center_outlined ),
-            activeIcon: Icon( Icons.fitness_center ),
+            icon: Icon(Icons.fitness_center_outlined),
+            activeIcon: Icon(Icons.fitness_center),
             label: "Training",
           ),
           BottomNavigationBarItem(
-            icon: Icon( Icons.bar_chart_outlined ),
-            activeIcon: Icon( Icons.bar_chart ),
+            icon: Icon(Icons.bar_chart_outlined),
+            activeIcon: Icon(Icons.bar_chart),
             label: "Progress",
           ),
           BottomNavigationBarItem(
-            icon: Icon( Icons.group_outlined ),
-            activeIcon: Icon( Icons.group ), 
-            label: "Community"
+            icon: Icon(Icons.group_outlined),
+            activeIcon: Icon(Icons.group),
+            label: "Community",
           ),
           BottomNavigationBarItem(
-            icon: Icon( Icons.person ),
-            activeIcon: Icon( Icons.person_outline ), 
-            label: "Profile"
+            icon: Icon(Icons.person),
+            activeIcon: Icon(Icons.person_outline),
+            label: "Profile",
           ),
         ],
       ),
