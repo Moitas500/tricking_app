@@ -43,7 +43,7 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
                   Text(
                     "Ready to level up?",
                     style: theme.textTheme.bodySmall?.copyWith(
-                      color: theme.textTheme.bodySmall?.color?.withOpacity(.7),
+                      color: theme.textTheme.bodySmall?.color?.withValues(alpha: .7),
                     ),
                   ),
               ],
