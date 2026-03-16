@@ -6,7 +6,7 @@ final router = GoRouter(
     GoRoute(
       path: '/',
       name: HomeScreen.name,
-      builder: (context, screen) => HomeScreen(),
+      builder: (context, screen) => ProgressAnalyticsScreen(),
     ),
 
     GoRoute(
