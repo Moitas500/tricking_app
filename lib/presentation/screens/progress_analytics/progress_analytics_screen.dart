@@ -24,10 +24,22 @@ class ProgressAnalyticsScreen extends StatelessWidget {
                   mainAxisSpacing: 12,
                   physics: const NeverScrollableScrollPhysics(),
                   children: const [
-                    StatsCard(title:  "Tricks Mastered", value: "87",  change: "+12%"),
-                    StatsCard(title: "Success Rate", value: "74%", change: "+5%"),
+                    StatsCard(
+                      title: "Tricks Mastered",
+                      value: "87",
+                      change: "+12%",
+                    ),
+                    StatsCard(
+                      title: "Success Rate",
+                      value: "74%",
+                      change: "+5%",
+                    ),
                     StatsCard(title: "Day Streak", value: "21", change: "-2"),
-                    StatsCard(title: "Weekly Training", value: "4.2h", change: "+20min"),
+                    StatsCard(
+                      title: "Weekly Training",
+                      value: "4.2h",
+                      change: "+20min",
+                    ),
                   ],
                 ),
               ],
