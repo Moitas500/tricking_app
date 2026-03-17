@@ -4,47 +4,53 @@ class StatsCard extends StatelessWidget {
   final String title;
   final String value;
   final String change;
+  final VoidCallback? onTap;
 
   const StatsCard({
     super.key,
     required this.title,
     required this.value,
     required this.change,
+    this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
 
-    return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: theme.colorScheme.surface,
+    final changeColor = change.contains("+") ? Colors.green : Colors.red;
+
+    return Card(
+      elevation: 2,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      child: InkWell(
         borderRadius: BorderRadius.circular(16),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(title, style: theme.textTheme.bodySmall),
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(title, style: theme.textTheme.bodySmall),
 
-          const SizedBox(height: 8),
+              Text(
+                value,
+                style: theme.textTheme.headlineSmall?.copyWith(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
 
-          Text(
-            value,
-            style: theme.textTheme.headlineSmall?.copyWith(
-              fontWeight: FontWeight.bold,
-            ),
+              Text(
+                change,
+                style: TextStyle(
+                  color: changeColor,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ],
           ),
-
-          const Spacer(),
-
-          Text(
-            change,
-            style: TextStyle(
-              color: change.contains("+") ? Colors.green : Colors.red,
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
